@@ -21,6 +21,12 @@ mongoose.connect(config.mongoURI,{
 
 app.get('/',(req,res)=>res.send('Hello Worlds~~~'))
 
+app.get('/api/hello', (req,res)=>{
+  res.send("안녕하세요 ~")
+})
+
+
+
 app.post('/api/users/register',(req,res)=>{
 
     //회원가입 시 필요한 정보 -> DB
